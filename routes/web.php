@@ -1,6 +1,4 @@
 <?php
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'userController@index')->name('site.home');
 
 Route::resource('usuarios', 'userController')->names('user')->parameters(['usuarios'=>'user']);
